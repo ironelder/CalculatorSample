@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="100+100 = 200"
+        tools:text="100+100 = 200"
+        android:textAlignment="gravity"
+        android:gravity="bottom|end"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_history"
+        app:layout_constraintVertical_weight="0.8"/>
+    <TextView
+        android:id="@+id/tv_history"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="+ + - x % + X c +"
+        android:textAlignment="gravity"
+        android:gravity="center_vertical|end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_weight="0.2"
+        tools:text="+ + - x % + X c +"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
