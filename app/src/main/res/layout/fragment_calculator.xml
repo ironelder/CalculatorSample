@@ -32,11 +32,11 @@
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toRightOf="@id/tv_plus"
-        app:layout_constraintRight_toLeftOf="@id/tv_multi"
+        app:layout_constraintRight_toLeftOf="@id/tv_multiple"
         app:layout_constraintBottom_toBottomOf="@id/tv_plus"/>
 
     <TextView
-        android:id="@+id/tv_multi"
+        android:id="@+id/tv_multiple"
         android:layout_width="0dp"
         android:layout_height="0dp"
         tools:text="x"
@@ -47,6 +47,21 @@
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toRightOf="@id/tv_minus"
+        app:layout_constraintRight_toLeftOf="@id/tv_divide"
+        app:layout_constraintBottom_toBottomOf="@id/tv_plus"/>
+
+    <TextView
+        android:id="@+id/tv_divide"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:text="/"
+        android:text="/"
+        android:background="@drawable/tv_border"
+        android:textAlignment="gravity"
+        android:gravity="center"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/tv_multiple"
         app:layout_constraintRight_toLeftOf="@id/tv_remainder"
         app:layout_constraintBottom_toBottomOf="@id/tv_plus"/>
 
@@ -61,7 +76,7 @@
         android:gravity="center"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/tv_multi"
+        app:layout_constraintLeft_toRightOf="@id/tv_divide"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/tv_plus"/>
 
