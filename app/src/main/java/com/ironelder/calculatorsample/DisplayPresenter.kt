@@ -8,8 +8,4 @@ class DisplayPresenter:DisplayContract.Presenter {
         editor?.putString(key, data)
         editor?.apply()
     }
-
-    override fun loadDisplayData(pref: SharedPreferences?, key: String): String {
-        return pref?.getString(key, "")?:""
-    }
 }

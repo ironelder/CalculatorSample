@@ -23,14 +23,6 @@ class DisplayFragment : Fragment(R.layout.fragment_display) {
             tv_result.text = (it as String)
         }, {})?.addDisposable()
 
-        tv_result.text = presenter.loadDisplayData(
-            activity?.getSharedPreferences("pref", MODE_PRIVATE),
-            "result"
-        )
-        tv_history.text = presenter.loadDisplayData(
-            activity?.getSharedPreferences("pref", MODE_PRIVATE),
-            "history"
-        )
 
     }
 

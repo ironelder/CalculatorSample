@@ -12,8 +12,6 @@ interface CalculatorContract {
         fun multiple( first:Int, second:Int ) : Int
         fun divide( first:Int, second:Int ) : Int
         fun reminder( first:Int, second:Int ) : Int
-        fun clear()
-        fun equal()
 
     }
 }

@@ -1,5 +1,6 @@
 package com.ironelder.calculatorsample
 
+import android.content.Context.MODE_PRIVATE
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
@@ -17,50 +18,8 @@ class CalculatorFragment : Fragment(R.layout.fragment_calculator) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        tv_plus.setOnClickListener {
-            presenter.clickCalculator(tv_plus.text.toString())
-        }
-
-        tv_minus.setOnClickListener {
-            presenter.clickCalculator(tv_minus.text.toString())
-        }
-
-        tv_multiple.setOnClickListener {
-            presenter.clickCalculator(tv_multiple.text.toString())
-        }
-
-        tv_divide.setOnClickListener {
-            EventBus.send(tv_divide.text)
-        }
-
-        tv_remainder.setOnClickListener {
-            EventBus.send(tv_remainder.text)
-        }
-
-        tv_clear.setOnClickListener {
-            presenter.clickCalculator(tv_clear.text.toString())
-        }
-
-        tv_num_zero.setOnClickListener {
-            presenter.clickNumber(tv_num_zero.text.toString())
-        }
-
-        tv_num_one.setOnClickListener {
-            presenter.clickNumber(tv_num_one.text.toString())
-        }
-
-        tv_num_two.setOnClickListener {
-            presenter.clickNumber(tv_num_two.text.toString())
-        }
-
-        tv_equal.setOnClickListener {
-            //            presenter.clickCalculator(tv_equal.text.toString())
-
-        }
-
-
-        //TODO : Refactoring
         initLayoutAttribute()
+        loadPreferenceData()
     }
 
     private fun initLayoutAttribute() {
@@ -85,6 +44,18 @@ class CalculatorFragment : Fragment(R.layout.fragment_calculator) {
                 )
             }?.addDisposable()
         }
+    }
+
+    private fun loadPreferenceData() {
+
+        presenter.loadDisplayData(
+            activity?.getSharedPreferences("pref", MODE_PRIVATE),
+            "result", calculatorData
+        )
+        presenter.loadDisplayData(
+            activity?.getSharedPreferences("pref", MODE_PRIVATE),
+            "history", calculatorData
+        )
     }
 
 
