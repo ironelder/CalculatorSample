@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
-        android:id="@+id/tv_result"
+        android:id="@+id/tv_history"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:text="100+100 = 200"
@@ -14,10 +14,10 @@
         android:textAlignment="gravity"
         android:gravity="bottom|end"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/tv_history"
+        app:layout_constraintBottom_toTopOf="@id/tv_result"
         app:layout_constraintVertical_weight="0.8"/>
     <TextView
-        android:id="@+id/tv_history"
+        android:id="@+id/tv_result"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:text="+ + - x % + X c +"
