@@ -1,3 +1,15 @@
 <resources>
+
     <string name="app_name">CalculatorSample</string>
+    <string name="tv_btn_plus">+</string>
+    <string name="tv_btn_minus">-</string>
+    <string name="tv_btn_multiple">x</string>
+    <string name="tv_btn_divide">/</string>
+    <string name="tv_btn_reminder">%</string>
+    <string name="tv_btn_equal">=</string>
+    <string name="tv_btn_clear">c</string>
+    <string name="tv_btn_zero">0</string>
+    <string name="tv_btn_one">1</string>
+    <string name="tv_btn_two">2</string>
+
 </resources>
